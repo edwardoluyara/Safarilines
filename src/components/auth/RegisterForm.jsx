@@ -71,7 +71,7 @@ const RegisterForm = ({ switchToLogin }) => {
               payload.append('license_documents', file);
             });
           }
-          // ❌ Skip license_documents entirely if not a service provider
+          // Skip license_documents entirely if not a service provider
         } else {
           payload.append(key, value);
         }
@@ -80,7 +80,7 @@ const RegisterForm = ({ switchToLogin }) => {
       // Submit to backend (register must support FormData)
       const response = await register(payload);
 
-      console.log("🚨 Registration response:", response);
+      console.log("Registration response:", response);
 
       if (response?.email) {
         navigate('/verify-email', {
@@ -376,7 +376,6 @@ const RegisterForm = ({ switchToLogin }) => {
                 multiple
                 onChange={handleChange}
                 className={styles.formInput}
-                required
               />
               {errors.license_documents && (
                 <span className={styles.error}>{errors.license_documents}</span>
