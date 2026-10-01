@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://api.bloombinary.com/auth/', 
+  baseURL: 'https://machines-mechanism-acids-nhs.trycloudflare.com/auth/', 
 });
 
 export const getUserData = async () => {
