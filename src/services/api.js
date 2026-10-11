@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://api.bloombinary.com/auth/', 
+  baseURL: 'https://api.bloombinary.com/auth/', 
 });
 
 export const getUserData = async () => {
